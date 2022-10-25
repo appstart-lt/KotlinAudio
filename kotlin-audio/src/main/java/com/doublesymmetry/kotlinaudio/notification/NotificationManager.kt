@@ -223,7 +223,7 @@ class NotificationManager internal constructor(private val context: Context, pri
         }
     }
 
-    internal fun destroy() = scope.launch {
+    fun destroy() = scope.launch {
         descriptionAdapter.release()
         internalNotificationManager?.setPlayer(null)
     }
